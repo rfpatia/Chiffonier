@@ -1,0 +1,12 @@
+{
+  "name": "application-name",
+  "version": "0.0.1",
+  "description": "show skeletons in browser",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.15.0",
+    "kinect2": "^0.1.5",
+    "path": "^0.12.7",
+    "socket.io": "^1.7.3"
+  }
+}

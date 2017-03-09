@@ -1,0 +1,424 @@
+.intro {
+  padding-left: 0px;
+  color: #fff;
+  font-size: 45px;
+  line-height: 60px;
+}
+
+.name {
+  font-size: 60px;
+  line-height: 76px;
+}
+
+.topbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 51px;
+  margin-right: 0px;
+  margin-left: 0px;
+  padding-right: 0px;
+  padding-left: 0px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.date {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 0px;
+  padding-right: 0px;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  color: #fff;
+  font-size: 45px;
+  line-height: 65px;
+}
+
+.temp {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 39px;
+  padding-right: 0px;
+  padding-left: 0px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  color: #fff;
+  font-size: 45px;
+  line-height: 58px;
+}
+
+.block2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 40px;
+  margin-right: 0px;
+  margin-left: 0px;
+  padding-left: 0px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.agenda {
+  padding-left: 0px;
+  background-color: hsla(0, 0%, 100%, 0);
+  color: #000;
+}
+
+.background {
+  background-color: #000;
+  background-image: -webkit-linear-gradient(270deg, #000, #000);
+  background-image: linear-gradient(180deg, #000, #000);
+}
+
+.tips {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.topcontainer {
+  position: static;
+  display: block;
+  margin-top: 0px;
+  padding-left: 0px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.choosecoats {
+  position: relative;
+  left: 0px;
+  top: 70px;
+  right: 0px;
+  bottom: 0px;
+  display: inline-block;
+  width: 180px;
+  height: 50px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
+  float: none;
+  clear: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  border-radius: 8px;
+  font-size: 18px;
+  line-height: 32px;
+  text-align: center;
+}
+
+.divcoatbutton {
+  display: block;
+  margin-top: 1000px;
+  text-align: center;
+}
+
+.wholepage {
+  background-image: -webkit-linear-gradient(270deg, #000, #000);
+  background-image: linear-gradient(180deg, #000, #000);
+}
+
+.clothing-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 0px;
+  margin-bottom: -37px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.sliderwardrobe {
+  height: 1000px;
+}
+
+.slide1 {
+  background-image: url('../images/iceCreamShirt-1.png');
+  background-position: 0px 0px;
+  background-size: contain;
+  background-attachment: scroll;
+}
+
+.slidermask {
+  height: 1000px;
+}
+
+.shirt1 {
+  width: 500px;
+  height: 500px;
+  margin-top: 0px;
+  background-image: url('../images/iceCreamShirt-1.png');
+  background-position: 0px 0px;
+  background-size: 1234px;
+}
+
+.shirt1button {
+  margin-top: -38px;
+  margin-left: 221px;
+  padding-top: 9px;
+  padding-left: 15px;
+  border-radius: 5px;
+}
+
+.shirtone {
+  margin-top: 37px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  padding-top: 0px;
+  padding-bottom: 23px;
+  padding-left: 0px;
+}
+
+.shirt2button {
+  margin-left: 206px;
+  border-radius: 5px;
+}
+
+.shirt3button {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 164px;
+  padding-bottom: 9px;
+  padding-left: 15px;
+  border-radius: 5px;
+}
+
+.shirt4button {
+  margin-top: 17px;
+  margin-left: 164px;
+  border-radius: 5px;
+}
+
+.containertwo {
+  margin-top: 70px;
+  padding-left: 0px;
+  text-indent: 0px;
+}
+
+.shirt5button {
+  margin-left: 230px;
+  border-radius: 5px;
+}
+
+.shirtfive {
+  margin-left: 51px;
+}
+
+.shirt6button {
+  margin-left: 196px;
+  border-radius: 5px;
+}
+
+.containerthree {
+  margin-top: 70px;
+}
+
+.shirtseven {
+  margin-left: 30px;
+}
+
+.shirteight {
+  margin-left: 91px;
+}
+
+.shirtnine {
+  margin-left: 62px;
+}
+
+.shirt8button {
+  margin-left: 194px;
+  border-radius: 5px;
+}
+
+.shirt9button {
+  margin-left: 196px;
+  border-radius: 5px;
+}
+
+.shirt7button {
+  margin-top: 30px;
+  margin-left: 164px;
+  border-radius: 5px;
+}
+
+.backbutton {
+  margin-left: 544px;
+  border-radius: 5px;
+}
+
+.bottomdiv {
+  margin-top: 55px;
+  margin-left: -543px;
+  text-align: center;
+}
+
+@media (max-width: 479px) {
+  .intro {
+    margin-top: 20px;
+    padding-left: 30px;
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .name {
+    font-size: 25px;
+    line-height: 34px;
+  }
+  .topbox {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: 36px;
+    padding-left: 0px;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .date {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 14px;
+    margin-left: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    -webkit-box-ordinal-group: 1;
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .temp {
+    margin-left: 0px;
+    padding-bottom: 52px;
+    padding-left: 0px;
+    color: #000;
+    font-size: 20px;
+  }
+  .block2 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: 34px;
+    padding-top: 0px;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .agenda {
+    margin-top: 5px;
+    padding-left: 32px;
+  }
+  .background {
+    height: 2016px;
+    background-image: -webkit-linear-gradient(270deg, transparent, transparent);
+    background-image: linear-gradient(180deg, transparent, transparent);
+    color: #000;
+  }
+}

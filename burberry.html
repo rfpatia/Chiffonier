@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Node Kinect2 Client</title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+<canvas id="bodyCanvas" width="1080" height="1850"></canvas>
+<button onclick="location.href='wardrobe'" type="button" class="btn btn-primary btn-lg btn-block">Select Another Clothing</button>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    var socket = io.connect('/');
+    var canvas = document.getElementById('bodyCanvas');
+    var ctx = canvas.getContext('2d');
+    var colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#00ffff', '#ff00ff'];
+    base_image = new Image();
+    base_image.onload = function(){
+        ctx.drawImage(base_image, 0, 0, 0, 0);
+    };
+
+    //base_image.src = 'https://img.clipartfox.com/7d63e80b0ca5dbd926aaa7244ca6c422_-t-shirt-free-stock-photo-black-tshirt-clipart-no-background_958-915.png';
+    base_image.src = 'images/burberryShirt.png';
+    //base_image.src = 'https://assets1.domestika.org/project-items/000/610/341/cami_1-big.jpg?1403205826'
+    //base_image.src = 'https://loseitapp.files.wordpress.com/2014/09/ice-cream-transparent-background.png'
+    // handstate circle size
+    var HANDSIZE = 20;
+    // closed hand state color
+    var HANDCLOSEDCOLOR = "red";
+    // open hand state color
+    var HANDOPENCOLOR = "green";
+    // lasso hand state color
+    var HANDLASSOCOLOR = "blue";
+    function updateHandState(handState, jointPoint) {
+        switch (handState) {
+            case 3:
+                drawHand(jointPoint, HANDCLOSEDCOLOR);
+                break;
+            case 2:
+                drawHand(jointPoint, HANDOPENCOLOR);
+                break;
+            case 4:
+                drawHand(jointPoint, HANDLASSOCOLOR);
+                break;
+        }
+    }
+    function drawHand(jointPoint, handColor) {
+        // draw semi transparent hand cicles
+        ctx.globalAlpha = 0.75;
+        ctx.beginPath();
+        ctx.fillStyle = handColor;
+        ctx.arc(jointPoint.depthX * 1100, jointPoint.depthY * 1834, HANDSIZE, 0, Math.PI * 2, true);
+        ctx.fill();
+        ctx.closePath();
+        ctx.globalAlpha = 1;
+    }
+
+    function make_base(x, y, width, height)
+    {
+        ctx.drawImage(base_image, x, y, width, height);
+    }
+
+    socket.on('bodyFrame', function(bodyFrame){
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = 'black';
+        ctx.fillRect(0,0, canvas.width, canvas.height);
+        var index = 0;
+        var coordinatex, coordinatey, height, width;
+        bodyFrame.bodies.forEach(function(body){
+            if(body.tracked) {
+                for(var jointType in body.joints) {
+                    var joint = body.joints[jointType];
+                    if (jointType == 4) {
+                        height = joint.depthY * 1834;
+                        width = joint.depthX * 1100;
+                    }
+                    else if (jointType == 8) {
+                        width = joint.depthX * 1100 - width;
+                    }
+                    else if (jointType == 12) {
+                        height = joint.depthY * 1834 - height;
+                    }
+                    else if (jointType == 20){
+                        coordinatex = joint.depthX * 1100;
+                        coordinatey = joint.depthY * 500;//1834;
+                    }
+
+                    ctx.fillStyle = colors[index];
+                    ctx.fillRect(joint.depthX * 1100, joint.depthY * 1534, 10, 10);
+                }
+                //draw hand states
+                //console.log(width);
+
+                coordinatex -= (width / 2) + (width / 150 * 9) * 29;
+                width += (width / 150 * 9) * 29 * 2;
+                console.log(width);
+                //console.log(height);
+                height *= 1.75;
+                //width *= 3;
+                coordinatey = -1.2853 * width + 1600;//1418.7;
+                //coordinatex -= -0.008 * Math.pow(width,2) + 1.9969 * width - 90.785;
+                //coordinatey -= 0.0065 * Math.pow(width, 2) - 1.6448 * width +134.91;
+                make_base(coordinatex, coordinatey, width, height);
+                updateHandState(body.leftHandState, body.joints[7]);
+                updateHandState(body.rightHandState, body.joints[11]);
+                index++;
+            }
+        });
+    });
+</script>
+</body>
+</html>
